@@ -154,17 +154,17 @@ The program will detect this and exit the loop gracefully.
 
 ## How It Works
 
-1. **Voice Input (Speech-to-Text)**
+1. **Voice Input (Speech-to-Text)**  
    When you press the **Enter** key, the program records your voice using the `SpeechRecognition` module. It processes the audio and converts it into text using a speech recognition engine (typically Google Web Speech API).
 
-2. **Maintaining Conversation Context**
+2. **Maintaining Conversation Context**  
    The recognized text is appended to a conversation history list. This context is maintained across multiple turns so the LLM can respond appropriately in an ongoing dialogue.
 
-3. **Generating Responses with Ollama**
+3. **Generating Responses with Ollama**  
    The user’s text input, along with the existing conversation history and the initial system prompt, is sent to a locally hosted LLM via the `ollama` Python package. The model processes the input and returns a relevant, contextual response.
 
-4. **Voice Output (Text-to-Speech)**
+4. **Voice Output (Text-to-Speech)**  
    The response from the LLM is then converted into spoken audio using the `pyttsx3` text-to-speech module, allowing the assistant to "speak" the reply aloud.
 
-5. **Interaction Loop**
+5. **Interaction Loop**  
    After each response, the program waits for you to press **Enter** again to speak the next prompt. This loop continues until you say `"bye"` or `"goodbye"`, which ends the session.
