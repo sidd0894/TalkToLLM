@@ -94,8 +94,6 @@ Once the server is running, open another terminal window and run the Python scri
 python voice_llm.py
 ```
 
-You will be prompted to enter the model name and system prompt.
-
 
 ### 3. Arguments
 
