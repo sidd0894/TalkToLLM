@@ -97,24 +97,20 @@ python voice_llm.py
 You will be prompted to enter the model name and system prompt.
 
 
-### 3. Enter the Model Name
+### 3. Arguments
 
-When prompted:
+- `--load-session`: **Optional**  
+Path of the previous session file (json file).  
+Example: `--load-session "path/to/session/file/session_12345.json"`
 
-```
-Ollama model name:
-```
+- `--save-session`: **Optional**  
+Path of the directory for saving the session file.
 
-Enter the **exact model name** you downloaded or used previously via Ollama (e.g., `llama3`, `mistral`, `codellama`, etc.).
+- `--model`: **Required**  
+Name of the model downloaded from Ollama. Enter the **exact model name** you downloaded or used previously via Ollama (e.g., `llama3`, `mistral`, `codellama`, etc.).
 
 
-### 4. Enter the System Prompt
-
-After that, you’ll be asked:
-
-```
-System Prompt:
-```
+### 4. System Prompt
 
 This is used to set the assistant’s behavior or personality.
 For example, entering:
@@ -137,19 +133,7 @@ After setup:
 
 ### 6. End the Chat
 
-To stop the conversation, simply **say**:
-
-```
-bye
-```
-
-or
-
-```
-goodbye
-```
-
-The program will detect this and exit the loop gracefully.
+To stop the conversation, simply say "bye" or "goodbye". The program will detect this and exit the loop gracefully.
 
 
 ## How It Works
