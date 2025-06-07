@@ -102,7 +102,7 @@ Path of the previous session file (json file).
 Example: `--load-session "path/to/session/file/session_12345.json"`
 
 - `--save-session`: **Optional**  
-Path of the directory for saving the session file.
+Path of the directory for saving the session file. You can ignore this argument if you want to save the session file in same directory where the python file is.
 
 - `--model`: **Required**  
 Name of the model downloaded from Ollama. Enter the **exact model name** you downloaded or used previously via Ollama (e.g., `llama3`, `mistral`, `codellama`, etc.).
@@ -148,5 +148,8 @@ To stop the conversation, simply say "bye" or "goodbye". The program will detect
 4. **Voice Output (Text-to-Speech)**  
    The response from the LLM is then converted into spoken audio using the `pyttsx3` text-to-speech module, allowing the assistant to "speak" the reply aloud.
 
-5. **Interaction Loop**  
+5. **Saving the session**  
+   You can save the session by saying `"save this session"`. The session conversation will me saved in a json file.
+
+6. **Interaction Loop**  
    After each response, the program waits for you to press **Enter** again to speak the next prompt. This loop continues until you say `"bye"` or `"goodbye"`, which ends the session.
